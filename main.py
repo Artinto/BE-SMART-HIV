@@ -31,8 +31,7 @@ class ImgAugTransform:
         return self.aug.augment_image(img).copy()
 
 
-def data_load(dataroot):
-    batch_size = 64
+def data_load(dataroot: str, batch_size: int, shuffle: bool):
     aug_transforms = ImgAugTransform()
 
     transform = transforms.Compose([
@@ -43,7 +42,7 @@ def data_load(dataroot):
 
     dataset = dset.ImageFolder(root=dataroot, transform=transform)
     dataloader = torch.utils.data.DataLoader(dataset, batch_size=batch_size,
-                                              shuffle=True, num_workers=2)
+                                              shuffle=shuffle, num_workers=2)
 
     print("Num of dateset:", len(dataloader.dataset))
 
