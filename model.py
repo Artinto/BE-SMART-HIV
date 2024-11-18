@@ -19,7 +19,7 @@ class BCE(nn.Module):
         x = self.resnet(x)
         x = self.fc1_drop(F.relu(self.fc1(x)))
         x = self.fc2_drop(F.relu(self.fc2(x)))
-        x = self.fc3(x)
+        x = torch.sigmoid(self.fc3(x))
         return x
 
     def init_weights(model):  # weight initialization
