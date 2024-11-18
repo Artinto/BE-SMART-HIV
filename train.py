@@ -68,9 +68,9 @@ def evaluate(net, testloader, criterion):
     return test_loss, test_accuracy
 
 
-classes = ('neg', 'neg_re', 'pos_re', 'pos')
+classes = ('neg', 'pos')
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-net = CE().to(device)
+net = BCE().to(device)
 
 criterion = nn.CrossEntropyLoss().to(device)
 optimizer = optim.AdamW(net.parameters(), lr=0.0001)
@@ -79,8 +79,8 @@ EPOCHS = 1000
 dataroot_train = 'Enter the train data path'
 dataroot_valid = 'Enter the valid data path'
 
-trainloader = ata_load(dataroot=dataroot_train, batch_size=64, shuffle: bool)
-validloader = data_load(dataroot_valid)
+trainloader = data_load(dataroot=dataroot_train, batch_size=64, shuffle=True)
+validloader = data_load(dataroot=dataroot_valid, batch_size=64, shuffle=False)
 
 best_accuracy = 0
 epoch = 0
