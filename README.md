@@ -46,5 +46,7 @@ $ pip install -r requirements.txt
 
 <br>
 
-## Trained weight download
-[hCG_trained_weight.pth](https://drive.usercontent.google.com/download?id=1Jk1ZFT1SDOMiPltEPOzbwm8vD2jB_rQj&export=download&authuser=0)
+## Trained weight
+- Pretrained with Covid-19 data: [[Google Drive]](https://drive.google.com/file/d/1u06XF4sE__bN0HkJx5bolHDqB53T5U9f/view?usp=drive_link)   
+- Fine-tuned with HIV LFA kit 1: [[Google Drive]](https://drive.google.com/file/d/1J8QmemOmWXEx6OK62zciikWfBsK6BBUh/view?usp=drive_link)   
+- Fine-tuned with HIV LFA kit 2: [[Google Drive]](https://drive.google.com/file/d/18tzK26vYdUnOclKq6OaYLGcMqep7fqoP/view?usp=drive_link)   
