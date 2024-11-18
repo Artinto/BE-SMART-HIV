@@ -1,7 +1,7 @@
 import torch
 import torch.optim as optim
 import torch.nn as nn
-from model import CE
+from model import BCE
 from main import data_load
 import numpy as np
 
@@ -73,10 +73,9 @@ def evaluate(net, testloader, criterion):
     return test_loss, test_accuracy, files_result
 
 
-classes = ('neg', 'neg_re', 'pos_re', 'pos')
+classes = ('neg', 'pos')
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-net = CE().to(device)
-# net.init_weights
+net = BCE().to(device)
 criterion = nn.CrossEntropyLoss().to(device)
 
 dataroot_train = 'Enter the train data path'
