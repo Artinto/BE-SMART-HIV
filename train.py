@@ -72,7 +72,7 @@ classes = ('neg', 'pos')
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 net = BCE().to(device)
 
-criterion = nn.CrossEntropyLoss().to(device)
+criterion = nn.BCELoss().to(device)
 optimizer = optim.AdamW(net.parameters(), lr=0.0001)
 EPOCHS = 1000
 
