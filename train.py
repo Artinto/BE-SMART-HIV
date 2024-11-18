@@ -1,7 +1,7 @@
 import torch
 import torch.optim as optim
 import torch.nn as nn
-from model import CE
+from model import BCE
 from main import data_load
 
 
@@ -79,7 +79,7 @@ EPOCHS = 1000
 dataroot_train = 'Enter the train data path'
 dataroot_valid = 'Enter the valid data path'
 
-trainloader = data_load(dataroot_train)
+trainloader = ata_load(dataroot=dataroot_train, batch_size=64, shuffle: bool)
 validloader = data_load(dataroot_valid)
 
 best_accuracy = 0
