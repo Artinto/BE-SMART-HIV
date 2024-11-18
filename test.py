@@ -78,10 +78,9 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 net = BCE().to(device)
 criterion = nn.BCELoss().to(device)
 
-dataroot_train = 'Enter the train data path'
 dataroot_test = 'Enter the test data path'
 
-testloader = data_load(dataroot_test)
+testloader = data_load(dataroot=dataroot_test, batch_size=64, shuffle=False)
 
 PATH = 'Enter the trained weight path'
 net.load_state_dict(torch.load(PATH))
