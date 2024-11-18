@@ -76,7 +76,7 @@ def evaluate(net, testloader, criterion):
 classes = ('neg', 'pos')
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 net = BCE().to(device)
-criterion = nn.CrossEntropyLoss().to(device)
+criterion = nn.BCELoss().to(device)
 
 dataroot_train = 'Enter the train data path'
 dataroot_test = 'Enter the test data path'
