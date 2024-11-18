@@ -1,4 +1,7 @@
+## Scalable Deep Learning Platform with Nanotechnology for High-Sensitivity, Point-of-Care HIV Detection 
 #### ✔ Python $\geq$ 3.8 and Ubuntu $\geq$ 16.04 are required
+#### ✔ If you have any issues, please pull request.
+
 ## Enviroment setting
 ### 1. git install
 ```bash
